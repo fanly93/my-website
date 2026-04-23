@@ -11,7 +11,7 @@ export function AboutSection() {
         <div className="shrink-0">
           <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden bg-gradient-to-br from-violet-600 to-indigo-600">
             <img
-              src="/my-website/avatar.svg"
+              src="/my-website/avatar.jpg"
               alt="小林fanly 的个人头像"
               loading="lazy"
               className="w-full h-full object-cover"
