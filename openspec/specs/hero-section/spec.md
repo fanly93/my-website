@@ -5,7 +5,9 @@ TBD - created by archiving change add-hero-section. Update Purpose after archive
 ## Requirements
 ### Requirement: 全屏展示个人信息
 
-Hero Section SHALL 占据完整视口高度（`100svh`），居中展示以下内容：姓名（`<h1>`）、职业标题（`<p>`）、一句话个人介绍（`<p>`）、CTA 按钮。Hero Section 的根元素 SHALL 携带 `id="home"` 属性，以供 Navbar 导航链接锚点定位，并设置 `scroll-margin-top: 64px` 以防止 Navbar 遮挡。
+Hero Section SHALL 占据完整视口高度（`100svh`），居中展示以下内容：姓名（`<h1>`）、职业标题（`<p>`）、个人介绍（`<p>`）、CTA 按钮。Hero Section 的根元素 SHALL 携带 `id="home"` 属性，以供 Navbar 导航链接锚点定位，并设置 `scroll-margin-top: 64px` 以防止 Navbar 遮挡。
+
+职业标题 SHALL 显示为「大模型开发工程师」，个人介绍 SHALL 涵盖 LLM 应用开发、AI Agent 系统构建、RAG 检索增强、知识图谱融合与多模态理解等技术方向。
 
 #### Scenario: 桌面端正常渲染
 

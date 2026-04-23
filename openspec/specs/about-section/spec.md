@@ -42,7 +42,7 @@ TBD - created by archiving change add-about-section. Update Purpose after archiv
 
 ### Requirement: 个人简介文字
 
-右侧 SHALL 展示开发者的个人简介，包含：姓名或称呼（`<h2>`）、一段个人介绍文字（`<p>`）。文字颜色 SHALL 在亮色/暗色模式下均满足 WCAG AA 对比度标准。
+右侧 SHALL 展示开发者的个人简介，包含：姓名或称呼（`<h2>`）、一段个人介绍文字（`<p>`）。简介 SHALL 体现大模型开发工程师的专业背景，涵盖 LLM 应用开发、AI Agent 系统设计、RAG 检索增强生成、知识图谱构建、多模态文档理解等技术方向及工程理念。文字颜色 SHALL 在亮色/暗色模式下均满足 WCAG AA 对比度标准。
 
 #### Scenario: 简介内容完整展示
 
@@ -54,11 +54,9 @@ TBD - created by archiving change add-about-section. Update Purpose after archiv
 - **WHEN** 全局主题为暗色模式
 - **THEN** 简介文字为浅色（如 `dark:text-white` / `dark:text-gray-300`），背景为深色，对比度达标
 
----
-
 ### Requirement: 社交账号链接展示
 
-关于我区域 SHALL 在简介下方展示社交账号入口，至少包含 GitHub 链接和邮箱链接。每个链接 SHALL 带图标，GitHub 链接在新标签页打开（`target="_blank" rel="noopener noreferrer"`），邮箱链接使用 `mailto:` 协议。系统 SHALL NOT 提供任何表单输入或信息提交功能。
+关于我区域 SHALL 在简介下方展示社交账号入口，至少包含 GitHub 链接和邮箱链接。每个链接 SHALL 带图标，GitHub 链接在新标签页打开（`target="_blank" rel="noopener noreferrer"`），邮箱链接使用 `mailto:` 协议，收件人地址为 `fanly93@qq.com`。系统 SHALL NOT 提供任何表单输入或信息提交功能。
 
 #### Scenario: GitHub 链接跳转
 
@@ -68,7 +66,7 @@ TBD - created by archiving change add-about-section. Update Purpose after archiv
 #### Scenario: 邮箱链接触发邮件客户端
 
 - **WHEN** 用户点击邮箱图标链接
-- **THEN** 系统调用默认邮件客户端并预填收件人地址
+- **THEN** 系统调用默认邮件客户端并预填收件人地址 `fanly93@qq.com`
 
 #### Scenario: 无表单提交功能（边界）
 
@@ -79,8 +77,6 @@ TBD - created by archiving change add-about-section. Update Purpose after archiv
 
 - **WHEN** 用户通过 Tab 键聚焦到社交链接并按下 Enter
 - **THEN** 触发与鼠标点击相同的跳转行为，焦点样式可见
-
----
 
 ### Requirement: 暗色/亮色模式适配
 
