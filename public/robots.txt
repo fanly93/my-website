@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://afanly93.github.io/my-website/sitemap.xml
+Sitemap: https://fanly93.github.io/my-website/sitemap.xml
