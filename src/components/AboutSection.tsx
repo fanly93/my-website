@@ -26,7 +26,7 @@ export function AboutSection() {
             关于我
           </h2>
           <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300 max-w-lg">
-            你好，我是小林fanly，一名热爱构建优雅数字体验的软件工程师。专注于 Web 全栈开发，对性能优化、交互设计和开发者体验有浓厚兴趣。相信代码不只是工具，更是表达创意的艺术。
+            你好，我是小林fanly，一名大模型开发工程师。专注于 LLM 应用开发与 AI Agent 系统设计，在 RAG 检索增强生成、知识图谱构建、多模态文档理解等方向积累了丰富的工程实践经验。热衷于将前沿 AI 技术转化为真实可落地的智能产品，相信好的 AI 工程不只是调用 API，而是深刻理解业务、精心设计系统、持续打磨体验。
           </p>
           <SocialLinks />
         </div>

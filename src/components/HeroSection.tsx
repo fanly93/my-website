@@ -23,11 +23,11 @@ export function HeroSection({ theme }: Props) {
         </h1>
 
         <p className="text-lg font-medium text-violet-600 dark:text-violet-400 sm:text-xl">
-          软件工程师
+          大模型开发工程师
         </p>
 
         <p className="max-w-xl text-base leading-relaxed text-gray-600 dark:text-gray-300 sm:text-lg">
-          用代码构建优雅的数字体验，一行一行地改变世界。
+          专注于大语言模型应用开发与 AI Agent 系统构建，深耕 RAG 检索增强、知识图谱融合与多模态理解等前沿方向。致力于将 LLM 的能力落地为真实可用的智能产品，让 AI 真正解决业务问题。
         </p>
 
         <a
