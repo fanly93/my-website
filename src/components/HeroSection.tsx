@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { LazyParticles } from './LazyParticles'
 
 type Theme = 'light' | 'dark'
@@ -30,12 +31,20 @@ export function HeroSection({ theme }: Props) {
           专注于大语言模型应用开发与 AI Agent 系统构建，深耕 RAG 检索增强、知识图谱融合与多模态理解等前沿方向。致力于将 LLM 的能力落地为真实可用的智能产品，让 AI 真正解决业务问题。
         </p>
 
-        <a
-          href="#projects"
-          className="mt-2 rounded-full bg-violet-600 px-8 py-3 text-sm font-semibold text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 dark:bg-violet-500 dark:focus-visible:ring-offset-gray-950 sm:text-base"
-        >
-          查看我的项目
-        </a>
+        <div className="mt-2 flex flex-wrap justify-center gap-3">
+          <a
+            href="#projects"
+            className="rounded-full bg-violet-600 px-8 py-3 text-sm font-semibold text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 dark:bg-violet-500 dark:focus-visible:ring-offset-gray-950 sm:text-base"
+          >
+            查看我的项目
+          </a>
+          <Link
+            to="/dashboard"
+            className="rounded-full border border-violet-600 px-8 py-3 text-sm font-semibold text-violet-600 hover:bg-violet-600 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 dark:border-violet-400 dark:text-violet-400 dark:hover:bg-violet-500 dark:hover:text-white dark:focus-visible:ring-offset-gray-950 sm:text-base"
+          >
+            进入学习助手
+          </Link>
+        </div>
       </div>
     </section>
   )

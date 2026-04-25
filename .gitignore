@@ -1,6 +1,17 @@
 # Claude Code local session data
 .claude/
 
+# Backend secrets & data
+backend/.env
+backend/app.db
+backend/.venv/
+backend/uploads/
+backend/**/__pycache__/
+backend/**/*.pyc
+
+# Frontend local env
+.env.local
+
 # Logs
 logs
 *.log

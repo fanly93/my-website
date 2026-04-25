@@ -13,8 +13,13 @@
     "@tailwindcss/vite": "^4.2.3",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.9.1",
+    "@types/react-syntax-highlighter": "^15.5.13",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
+    "react-markdown": "^10.1.0",
+    "react-router-dom": "^7.14.2",
+    "react-syntax-highlighter": "^16.1.1",
+    "recharts": "^3.8.1",
     "tailwindcss": "^4.2.3"
   },
   "devDependencies": {

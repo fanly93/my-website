@@ -2,23 +2,63 @@ schema: spec-driven
 
 # 项目上下文：提供给 AI 生成 artifacts 时的背景信息
 context: |
-  项目：个人品牌站（Personal Website）
-  技术栈：React 19 + Vite 7 + TypeScript + Tailwind CSS v4
-  部署：GitHub Pages，base path 为 /my-website/
+  项目：个人品牌站，正向全栈 AI 学习平台演进
+
+  当前状态：纯前端品牌站（HeroSection + ProjectsSection + AboutSection 三段式单页）
+  演进方向：添加后端 API 服务（FastAPI + SQLite），接入大模型，构建 AI 学习平台功能
+
+  前端技术栈：
+    - 框架: React 19 + Vite 7 + TypeScript
+    - 样式: Tailwind CSS v4，使用 dark: 前缀支持暗色模式（.dark class 挂载在 <html> 上）
+    - 路由: 当前无路由库，单页 anchor hash 导航；扩展时须引入 React Router
+    - 组件: 全函数式组件 + 自定义 Hooks（useTheme / useScrolled / useActiveSection）
+    - 状态: props drilling，全局状态待建立
+    - 构建产物: dist/ 静态文件，base path 为 /my-website/
+
+  后端技术栈（即将引入）：
+    - 框架: FastAPI（Python）
+    - 数据库: SQLite
+    - 接入大模型 API（具体模型待定）
+    - 与前端完全解耦，通过 REST API 通信
+
+  部署：
+    - 前端: GitHub Pages，base path 为 /my-website/
+    - 后端: 独立部署（不影响前端构建和 GitHub Pages 发布流程）
+
+  核心约束：
+    - 复用已有前端组件，不推倒重来
+    - 新增后端服务不得影响前端构建（npm run build 保持独立可运行）
+    - 所有新组件使用 TypeScript + 函数式组件
+    - 禁止内联 style，样式全部使用 Tailwind CSS
+    - 所有图片使用 lazy loading
+    - 组件文件名使用 PascalCase
+
   设计风格：科技感，动态粒子风，支持亮/暗切换
-  性能：首屏加载 < 2 秒，所有图片使用 lazy loading
+  性能目标：首屏加载 < 2 秒
 
 # Artifact 生成规则
 rules:
-  proposal:
-    - 必须明确写出 out-of-scope（不做什么）
-    - 必须评估对现有功能的影响
   specs:
-    - 使用 Given/When/Then 格式描述交互行为
-    - 每个 spec 必须包含至少一个边界/异常场景
+    - "所有 API 行为使用 Given/When/Then 格式"
+    - "每个 spec 必须包含至少一个错误场景"
+    - "每个 requirement 的 scenario 不超过 5 个"
+    - "单个 spec 文件不超过 2000 词"
+    - "省略理由说明，除非直接影响实现"
+    - "使用 RFC 2119 关键词（SHALL / SHOULD / MAY）"
+
   tasks:
-    - 每个任务粒度不超过 30 分钟
-    - 按 Phase 分组，每个 Phase 结束后等待我确认
+    - "单个 task 不超过 2 小时工作量"
+    - "相关 task 按 phase 分组"
+    - "每个 phase 结束后包含验证步骤"
+    - "新建服务前必须先检查是否有可复用的已有服务"
+
+  design:
+    - "包含组件层级图"
+    - "文档化所有 API 端点规范"
+
+  proposal:
+    - "必须显式列出不做的事项（out-of-scope / NOT doing 清单）"
+    - "高风险变更必须包含回滚方案"
 
 # 语言设置
 languages: |
