@@ -1,17 +1,8 @@
-from pydantic import field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
     database_url: str = "sqlite+aiosqlite:///./app.db"
-
-    @field_validator("database_url", mode="before")
-    @classmethod
-    def fix_postgres_scheme(cls, v: str) -> str:
-        # Render provides postgresql:// but asyncpg requires postgresql+asyncpg://
-        if isinstance(v, str) and v.startswith("postgresql://"):
-            return v.replace("postgresql://", "postgresql+asyncpg://", 1)
-        return v
     jwt_secret: str = "dev-secret-change-in-production"
     jwt_access_expire_minutes: int = 15
     jwt_refresh_expire_days: int = 7
